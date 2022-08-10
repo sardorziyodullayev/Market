@@ -3,12 +3,12 @@ let elSiteInput = document.querySelector(".form-input");
 let elSiteOutput = document.querySelector(".form-output");
 let elSiteList = document.querySelector(".list");
 
+let products = [];
+
 elSiteForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   let inputValue = elSiteInput.value;
-
-  let products = [];
   products.push;
 
   for (products of inputValue) {
