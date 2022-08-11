@@ -2,6 +2,7 @@ let elSiteForm = document.querySelector(".site-form");
 let elSiteInput = document.querySelector(".form-input");
 let elSiteOutput = document.querySelector(".form-output");
 let elSiteList = document.querySelector(".list");
+let liLists = document.querySelector(".list-group-item");
 
 let products = [];
 
@@ -9,12 +10,19 @@ elSiteForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   let inputValue = elSiteInput.value;
-  products.push;
+  if (!products.includes(inputValue)) {
+    products.push(inputValue);
+  }
 
-  for (products of inputValue) {
+  elSiteInput.value = "";
+  elSiteList.innerHTML = "";
+  console.log(products);
+
+  for (product of products) {
     let elItem = document.createElement("li");
-    elItem.textContent = inputValue;
+    elItem.setAttribute("class", "list-group-item");
+    elItem.textContent = product;
     elSiteList.appendChild(elItem);
-    elItem += products[i];
+    // elItem += product[products];
   }
 });
