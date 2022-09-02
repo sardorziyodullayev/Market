@@ -26,3 +26,7 @@ elSiteForm.addEventListener("submit", function (evt) {
     // elItem += product[products];
   }
 });
+
+
+let local = localStorage.setItem("mahsulolar", products) 
+console.log(local);
