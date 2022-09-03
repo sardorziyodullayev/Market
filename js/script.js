@@ -25,7 +25,9 @@ elSiteForm.addEventListener("submit", function (evt) {
     elItem.textContent = product;
     elSiteList.appendChild(elItem);
   }
-  let local = localStorage.setItem("mahsulolar", JSON.stringify(products)) 
+
+  
+ localStorage.setItem("mahsulolar", JSON.stringify(products)) 
 });
 
 
