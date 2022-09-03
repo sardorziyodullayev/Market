@@ -8,25 +8,24 @@ let products = [];
 
 elSiteForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
+  
 
   let inputValue = elSiteInput.value;
+
   if (!products.includes(inputValue)) {
     products.push(inputValue);
   }
 
   elSiteInput.value = "";
   elSiteList.innerHTML = "";
-  console.log(products);
 
   for (product of products) {
     let elItem = document.createElement("li");
     elItem.setAttribute("class", "list-group-item");
     elItem.textContent = product;
     elSiteList.appendChild(elItem);
-    // elItem += product[products];
   }
+  let local = localStorage.setItem("mahsulolar", JSON.stringify(products)) 
 });
 
 
-let local = localStorage.setItem("mahsulolar", products) 
-console.log(local);
